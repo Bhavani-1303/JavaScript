@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //program to leap years between 1900 and 2024
+        var start=1900;
+        var end=2024;
+        var i;
+        for(i=start;i<=end;i++){
+            if((i%4==0) && ((i%400==0) || (i%100!==0))){
+                document.write(i+"<br>");
+            }
+        }   
+    </script>
+</body>
+</html>
