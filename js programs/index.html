@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // class with one method that method work as method overloading
+        var sum=0;
+        class addition{
+            add(...arr){
+                for(let i of arr){
+                    sum=sum+i;
+                }
+                document.write(sum+"<br>")
+                sum=0;
+            }
+        }
+        var ad1=new addition();
+        ad1.add(2,3)
+        ad1.add(4,6,7,8)
+    </script>
+</body>
+</html>

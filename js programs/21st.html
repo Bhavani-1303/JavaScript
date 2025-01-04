@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Write a JavaScript program to print N digits in fibonacci series 
+        n=parseInt(prompt("Enter a number"))
+        /*var fib=(n)=>{
+            if(n<=0)
+               document.write("Incorrect output")
+            if(n==1)
+               return 0
+            if(n==2)
+               return 1
+            else
+               return fib(n-1)+fib(n-2);
+        }
+        document.write(fib(n));*/
+        var fib=(n)=>{
+            if(n<=0){
+               document.write("Enter a positive number")
+               return 0;
+            }
+            //document.write("fibonacci series");
+            let a=0,b=1;
+            for(let i=1;i<=n;i++){
+                if(i==1){
+                    document.write(a+" ")
+                }
+                else if(i==2){
+                    document.write(b+" ")
+                }
+                else{
+                    let next=a+b;
+                    document.write(next+" ")
+                    a=b;
+                    b=next;
+                }
+            }
+        }
+        fib(10)
+    </script>
+</body>
+</html>

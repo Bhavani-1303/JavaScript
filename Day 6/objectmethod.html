@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var mobile={
+            mobileName:"9RT",
+            mobileCompany:"OnePlus",
+            processor:"SD 888",
+            storage:"128gb",
+            price:40000,
+            fullName:function(){
+                return this.mobileCompany+this.mobileName;
+            }
+        }
+        var mobile1={
+            mobileName:"S23",
+            mobileCompany:"Samsung",
+            processor:"SD",
+            storage:"128gb",
+            price:50000,
+            fullName:function(){
+                return this.mobileCompany+this.mobileName;
+            }
+        }
+        document.write(mobile.fullName())
+        document.write(mobile1.fullName())
+
+        
+    </script>
+</body>
+</html>

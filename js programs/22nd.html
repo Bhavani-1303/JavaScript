@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Write a JavaScript program to create subclasses for different types of people (e.g., Student, Teacher) inheriting from the Person class and adding additional properties and methods.
+        class Teacher{
+            constructor(name,age){
+                this.name=name;
+                this.age=age;
+            }
+            displaydetails(){
+                document.write(`${this.name} ${this.age}`);
+            }
+        }
+        class Student extends Teacher{
+            constructor(name,age,address){
+                super(name,age);
+                this.address=address;
+            }
+            displaydetails(){
+                super.displaydetails();
+                document.write("<br> the man from"+this.address);
+            }
+            greet(){
+                document.write("<br> Good Morning"+this.address)
+            }
+        }
+        var s1=new Student("Bhavya",21,"Hyd");
+        s1.displaydetails();
+        s1.greet();
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Document</title>
+    <style>
+        .container{
+            position: relative;
+            left:450px;
+            top:100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 align="center">Movie Review</h2>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label class="form-label">Movie:</label>
+                                <select>
+                                    <option value="" disabled selected>Select a movie</option>
+                                    <option value="">Devara</option>
+                                    <option value="">Lucky Baskar</option>
+                                    <option value="">Pushpa2</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Class:</label>
+                                <select onchange="updateAmount()" id="ticketclass">
+                                    <option value="" disabled selected>Select a class</option>
+                                    <option value="300">Diamond</option>
+                                    <option value="200">Silver</option>
+                                    <option value="100">Gold</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">No.of Tickets:</label>
+                                <input type="number" id="num" oninput="updateAmount()">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer">
+                        <button type="button" class="btn btn-primary" onclick="display()">Book Now</button>
+                        <button type="button" class="btn btn-secondary" onclick="display1()">Cancel</button>
+                        <div id="printing"></div>
+                        <div id="printings"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let amount = 0;
+        function updateAmount(){
+            var ticket = document.getElementById("ticketclass").value;
+            var number = document.getElementById("num").value;
+            amount = ticket * number;   
+        }
+        function display(){
+            var ticket = document.getElementById("ticketclass").value;
+            var number = document.getElementById("num").value;
+            document.getElementById("printing").innerHTML = `You selected ${number} ticket(s) worth a total of ₹${amount}`;
+        }
+        function display1(){
+            document.getElementById("printings").innerHTML=`cancel Booking`;
+        }
+    </script>
+</body>
+</html>

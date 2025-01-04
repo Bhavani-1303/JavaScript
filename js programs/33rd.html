@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const employee = [
+            { 
+            name: 'Alice', 
+            salary: 40000,
+            id:101,
+            },
+            { 
+            name: 'Bob', 
+            salary: 60000,
+            id:102,
+            },
+            { 
+            name: 'Charlie', 
+            salary: 50000, 
+            id:103,
+            },
+        ];
+        var amount=parseInt(prompt("Enter the amount"));
+        var updatedEmployee=employee.filter((emp)=>emp.salary>amount).sort((a,b)=>a.name.localeCompare(b.name))
+        for(let a of updatedEmployee){
+            for(let k in a){
+                document.write(`${k}:${a[k]}<br>`);
+            }
+        }
+        
+    </script>
+</body>
+</html>

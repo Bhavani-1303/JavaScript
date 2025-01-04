@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Write a JavaScript program to find the nth Fibonacci numbers
+        n=parseInt(prompt("enter a numebr"))
+        function fib(n){
+            if(n<=0){
+                document.write("Enter a postive number")
+            }
+            if(n==1)
+                return 0
+            if(n==2)
+                return 1
+            else
+                return fib(n-1)+fib(n-2)
+        }
+        document.write(fib(n))
+    </script>
+</body>
+</html>

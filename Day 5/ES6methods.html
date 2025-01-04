@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //forEach
+        var arr=[4,1,34,6,3,9,54,4]
+        arr.forEach(multiwith2);
+        function multiwith2(ele){
+            document.write(`${ele*2}<br>`);
+        }
+        //arrow function
+        arr.forEach((ele,ind)=>document.write(`${ind}:${ele*2}<br>`));
+        //map
+        arr1=arr.map((ele)=>ele*3);
+        document.write(arr1+"<br>");
+        //by using map to print even numbers
+        arr2=arr.map((ele)=>{
+            if(ele%2==0)
+                return ele;
+        });
+        document.write(arr2+"<br>");//here displaying empty space when it is not even no. to overcome this we use the filter method
+        //filter
+        arr3=arr.filter((ele)=>{
+            if(ele%2==0)
+                return ele;
+        });
+        document.write(arr3+"<br>");
+        //findIndex
+        arr4=arr.findIndex((ele)=>ele>50);
+        document.write(arr4+"<br>");
+        //indexOf
+        document.write(arr.indexOf(9)+"<br>");
+        //lastIndexOf
+        document.write(arr.lastIndexOf(4));
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Write a JavaScript program to create a function that takes a string and replaces vowels with *
+        str=prompt("Enter a string")
+        function fun1(str){
+            str1=str.toLowerCase()
+            str2=""
+            for(let i=0;i<str1.length;i++){
+                if(str1[i]=='a' || str1[i]=='e' || str1[i]=='i' || str1[i]=='o' || str1[i]=='u'){
+                    str2+='*'
+                }
+                else{
+                    str2+=str1[i]
+                }
+            }  
+            return str2    
+        }
+        document.write(fun1(str))
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Write a JavaScript program that simulates a coin toss using a promise (resolve for heads, reject for tails)
+        n=parseInt(prompt("Enter a number"))
+        let coinToss=new Promise((res,rej)=>{
+            if(n==1){
+                res("The coin toss is head")
+            }
+            else if(n==0){
+                rej("The coin toss is tail")
+            }
+            else{
+                rej("Invalid enter 1 or 0")
+            }
+        }).then((msg)=>document.write(msg))
+          .catch((err)=>document.write(err))
+          .finally(()=>document.write("<br> Success"))
+
+    </script>
+</body>
+</html>

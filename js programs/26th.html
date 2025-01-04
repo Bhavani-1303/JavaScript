@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Write JavaScript program to create new array of leap years from given array
+        var arr1=[1900,2000,2004,2009,1600,1904,2024,87]
+        var arr2=arr1.filter((ele)=>((ele%4==0) && (ele%100!=0 || ele%400==0)));
+        document.write(arr2);
+    </script>
+</body>
+</html>

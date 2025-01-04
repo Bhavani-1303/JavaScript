@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //write a javascript program to store factorials of each number into new array from given array
+        var arr=[4,6,3,5,8,1];
+        /*var c;
+        var newarr=[];
+        for(let i=0;i<arr.length;i++){
+            c=arr[i];
+            var fact=1;
+            for(let i=1;i<=c;i++){
+                fact=fact*i;
+            }
+            newarr.push(fact);  
+        }
+        document.write(newarr+"<br>");*/
+        var newarr=arr.map((ele)=>{
+              var fact=1;
+              for(let i=1;i<=ele;i++){
+                fact=fact*i;
+            }
+            return fact;
+    });
+    document.write(newarr)
+    </script>
+</body>
+</html>

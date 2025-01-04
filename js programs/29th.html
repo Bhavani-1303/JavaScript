@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //write a javascript program to implement promises for even numbers, if number is even fulfill the promise and it is odd reject the promise
+        let a=parseInt(prompt("Enter a number"))
+        let evenCheck=new Promise((res,rej)=>{
+            if(a%2==0){
+                res("Even number");
+            }
+            else{
+                rej("Not an even number");
+            }
+        }).then((msg)=>document.write(msg))
+        .catch((err)=>document.write(err))
+        .finally(()=>document.write("<br> success"))
+    </script>
+</body>
+</html>

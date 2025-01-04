@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var fruits=["Apple","banana","mango","papaya"];
+        var veg=["Tomato","potato","carrot","drumstick"];
+        veg.pop();//pop at the end
+        fruits.push("pine apple");//add at the end
+        document.write(veg+"<br>");
+        document.write(fruits+"<br>");
+        fruits.shift()//pop at the beginning
+        veg.unshift("beetroot");//add at the begining  
+        document.write(fruits+"<br>");
+        document.write(veg+"<br>");
+        fruits.splice(1,2,"orange");// start from 1,=> 2 items deleted and add orange at that position
+        document.write(fruits+"<br>");
+        arr=["facebook","google","insta","twitter"]
+        arr.sort();
+        arr.sort().reverse();
+        document.write(arr+"<br>");
+        arr1=[4,6,34,12,-3,53,-99]
+        arr1.sort(function(a,b){
+            return a-b;//asending order
+        });
+        document.write(arr1+"<br>");
+        document.write(arr1.join('#'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var mobile={
+            mobileName:"9RT",
+            mobileCompany:"OnePlus",
+            processor:"SD 888",
+            storage:"128gb",
+            price:40000,
+            fullName:function(){
+                return this.mobileCompany+this.mobileName;
+            }
+        }
+        var m1={
+            mobileName:"S23",
+            mobileCompany:"Samsung",
+        }
+        //function bind can accept single extra parameter but it returns copy of the function
+        var m2=mobile.fullName.bind(m1);
+        document.write(m2())
+        
+    </script>
+</body>
+</html>

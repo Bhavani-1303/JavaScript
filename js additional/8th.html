@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Find the youngest person from an array of objects containing name and age.
+        people = [
+            { 
+                name: 'Anna', 
+                age: 25 
+            },
+            { 
+                name: 'Mark', 
+                age: 20 
+            },
+            { 
+                name: 'Sophia', 
+                age: 30 
+            },
+        ];
+        people.sort((a,b)=>a.age-b.age);
+        let c=people.length;
+        let young=people[0]
+        let elder=people[c-1]
+        for(let i in young){
+            document.write(`${i}:${young[i]}<br>`)
+        }
+        for(let i in elder){
+            document.write(`${i}:${elder[i]}<br>`)
+        }
+        
+    </script>
+</body>
+</html>

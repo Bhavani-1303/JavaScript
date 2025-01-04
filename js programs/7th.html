@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Write a JavaScript program to print student details who got highest marks, create objects using class 
+        class Student{
+            constructor(name,marks){
+                this.name=name;
+                this.marks=marks;
+            }
+        }
+        var arr=[
+            new Student("Bhavya",90),
+            new Student("Bhavani",85),
+            new Student("Suppi",80),
+        ];
+        function getTop(arr){
+            let topMarks=arr[0];
+            for(let i of arr){
+                if(arr.marks>topMarks.marks){
+                    topMarks=i;
+                }
+            }
+            return topMarks;
+        }
+        var a=getTop(arr);
+        document.write("Marks of highest one",+a.marks);
+    </script>
+</body>
+</html>

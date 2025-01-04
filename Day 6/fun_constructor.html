@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function employee(empName,empid,empsalary){
+            this.empName=empName;
+            this.empid=empid;
+            this.empsalary=empsalary;
+        }
+        let e1=new employee("Bhavya",101,50000);
+        let e2=new employee("Bhagi",102,60000);
+        let e3=new employee("Bhavani",103,55000);
+        let e4=new employee("Bhavss",104,45000);
+        let allemps=[e1,e2,e3,e4]
+        for(let a of allemps){
+                for(let k in a){
+                    document.write(`${k}:${a[k]}<br>`)
+                }
+            document.write("<br>")
+            }
+    </script>
+</body>
+</html>

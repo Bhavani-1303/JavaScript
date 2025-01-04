@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello world</h1>
+    <h1>Welcome to JavaScript classes</h1>
+    <h1>Hyderabad</h1>
+    <button onclick="changecolor()">changecolor1</button>
+    <script>
+        //Write a JavaScript program to add colors to all h1 tags when the button is clicked
+        function changecolor(){
+            var content=document.getElementsByTagName("h1")
+            content[0].style.color="red";
+            content[1].style.color="green";
+            content[2].style.color="blue";
+
+        }
+        
+    </script>
+</body>
+</html>

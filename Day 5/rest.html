@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add(...arr){
+            var sum=0;
+            for(let a of arr){
+                sum+=a;
+            }
+            document.write(sum+"<br>");
+        }
+        add(3,4);
+        add(3,5,"hi");
+        //add("hi","hello","hii"); when we are passing strings to function the sum would be="" empty string
+    </script>
+</body>
+</html>
